@@ -3,13 +3,9 @@ const passwords = require('../passwords.json')
 
 Object.keys(passwords).forEach((loginOption) => {
   router.get(`/${loginOption}`, (req, res) => {
-    if (req.body.password) {
-      const password = req.body.password
-      if (password === passwords[loginOption].password) {
-        res.end(passwords[loginOption].key)
-      } else {
-        res.end('no password')
-      }
+    const password = req.query.password
+    if (password === passwords[loginOption].password) {
+      res.end(passwords[loginOption].key)
     } else {
       res.end('no password')
     }
