@@ -9,7 +9,6 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
   },
-
   "scripts": {
     "start": "nodemon --exec babel-node app.js"
   },
