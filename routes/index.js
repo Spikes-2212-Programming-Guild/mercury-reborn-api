@@ -1,3 +1,5 @@
-const login = require('./login')
+const { login } = require('./login')
 
-exports.login = login
+export default {
+  login: login
+}

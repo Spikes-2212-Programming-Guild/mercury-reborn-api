@@ -1,9 +1,7 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const config = require('./config.json')
-
-const routes = require('./routes')
-
+import express from 'express'
+import bodyParser from 'body-parser'
+import routes from './routes'
+import config from './config.json'
 const app = express()
 
 app.use(bodyParser.json())
