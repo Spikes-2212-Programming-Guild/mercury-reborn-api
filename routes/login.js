@@ -8,7 +8,7 @@ Object.keys(passwords).forEach((loginOption) => {
     if (password === passwords[loginOption].password) {
       res.end(passwords[loginOption].key)
     } else {
-      res.end('no password')
+      res.status(401).send('incorrect password')
     }
   })
 })
