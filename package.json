@@ -9,12 +9,20 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
   },
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "eslint": "^5.12.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.9"
   }
 }
