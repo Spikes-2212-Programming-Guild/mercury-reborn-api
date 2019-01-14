@@ -1,5 +1,9 @@
 {
   "http" : {
     "port": 8088
+  },
+
+  "gameData": {
+    "eventName": ""
   }
 }
