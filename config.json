@@ -5,6 +5,6 @@
 
   "data": {
     "eventName": "",
-    "form": "./form.json"
+    "form": "form.json"
   }
 }
