@@ -1,5 +1,10 @@
 {
   "http" : {
     "port": 8088
+  },
+
+  "data": {
+    "eventName": "",
+    "form": "form.json"
   }
 }
