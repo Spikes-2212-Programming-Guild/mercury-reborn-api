@@ -3,7 +3,7 @@
     "port": 8088
   },
 
-  "gameData": {
+  "data": {
     "eventName": ""
   }
 }
