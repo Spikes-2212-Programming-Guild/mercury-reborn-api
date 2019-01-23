@@ -13,6 +13,9 @@ router.get("/form", (req, res) => {
   res.json(scoutingForm)
 })
 
+router.get("/tba-key", (req, res) => {
+  res.json(gameConfig.data.tbaKey)
+})
 
 
 export {router as config}
