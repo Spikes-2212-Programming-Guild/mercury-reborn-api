@@ -6,6 +6,7 @@
   "author": "Spikes#2212",
   "license": "MIT",
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
   },
