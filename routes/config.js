@@ -1,7 +1,7 @@
 import { Router } from "express"
 import gameConfig from "../config.json"
 
-const scoutingForm = require(`./${gameConfig.data.form}`)
+const scoutingForm = require(`../${gameConfig.data.form}`)
 
 const router = Router()
 
