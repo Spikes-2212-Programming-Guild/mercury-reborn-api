@@ -8,6 +8,11 @@ async function saveMatch(teamNumber, match) {
   })
 }
 
+async function getMatch(teamNumber, matchNumber) {
+  return await team.getTeam(teamNumber).findOne({number: matchNumber})
+}
+
 export {
-  saveMatch
+  saveMatch,
+  getMatch
 }
