@@ -10,7 +10,14 @@ async function getMatch(teamNumber, matchNumber) {
   return await team.getTeam(teamNumber).matches.find(match => match.number = matchNumber)
 }
 
+async function removeMatch(teamNumber, matchNumber) {
+  const query = {}
+  query[`matches.${matchNumber}`] = ""
+  return await team.updateTeam(teamNumber, {$unset: query})
+}
+
 export {
   saveMatch,
-  getMatch
+  getMatch,
+  removeMatch
 }
