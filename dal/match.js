@@ -2,10 +2,8 @@ import * as team from "./team"
 
 async function saveMatch(teamNumber, match) {
   const query = {}
-  query[`${match.number}`] = match
-  return await team.updateTeam(teamNumber, {
-    $set: query
-  })
+  query[`matches.${match.number}`] = match
+  return await team.updateTeam(teamNumber, {$set: query})
 }
 
 async function getMatch(teamNumber, matchNumber) {
