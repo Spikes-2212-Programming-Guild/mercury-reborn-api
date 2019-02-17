@@ -16,8 +16,14 @@ async function removeMatch(teamNumber, matchNumber) {
   return await team.updateTeam(teamNumber, {$unset: query})
 }
 
+async function matchExists(teamNumber, matchNumber) {
+  const m = team.getTeam(teamNumber).matches.find(match => match.number === matchNumber)
+  return !!m
+}
+
 export {
   saveMatch,
   getMatch,
-  removeMatch
+  removeMatch,
+  matchExists
 }
