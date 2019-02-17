@@ -7,7 +7,7 @@ async function saveMatch(teamNumber, match) {
 }
 
 async function getMatch(teamNumber, matchNumber) {
-  return await team.getTeam(teamNumber).findOne({number: matchNumber})
+  return await team.getTeam(teamNumber).matches.find(match => match.number = matchNumber)
 }
 
 export {
