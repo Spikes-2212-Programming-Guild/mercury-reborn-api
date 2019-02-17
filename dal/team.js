@@ -30,8 +30,6 @@ function setCollection(collection) {
   teams = collection
 }
 
-
-
 export {
   setCollection,
   getTeam,
