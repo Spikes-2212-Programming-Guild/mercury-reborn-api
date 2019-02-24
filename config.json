@@ -7,5 +7,12 @@
     "eventName": "2018isde1",
     "form": "form.json",
     "tbaKey": "kXK9CBWzGkE4u3bTHjymrISlG2lxXm3CdIheTz2XXBlhO38tOwuVEwEVmzXZKFfK"
+  },
+
+
+  "mongo" :{
+    "url": "mongodb://localhost:27017",
+    "db" : "mercury_reborn",
+    "collection": "demo"
   }
 }
