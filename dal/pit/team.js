@@ -9,8 +9,8 @@ async function pitScoutingExists(team) {
   return !!(await teams.findOne({team}))
 }
 
-async function dropPitScouting(team) {
-  return await teams.dropOne({team})
+async function deletePitScouting(team) {
+  return await teams.deleteOne({team})
 }
 
 async function getPitScouting(team) {
@@ -26,6 +26,6 @@ export {
   insertPitScouting,
   getPitScouting,
   setCollection,
-  dropPitScouting,
+  deletePitScouting,
   pitScoutingExists
 }
