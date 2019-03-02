@@ -13,7 +13,7 @@ async function deletePitScouting(team) {
   return await teams.deleteOne({team})
 }
 
-async function getPitScouting(team) {
+async function findPitScouting(team) {
   return (await teams.findOne({team}).project({id:0, team:0})).form
 }
 
@@ -24,7 +24,7 @@ function setCollection(collection) {
 
 export {
   insertPitScouting,
-  getPitScouting,
+  findPitScouting,
   setCollection,
   deletePitScouting,
   pitScoutingExists
