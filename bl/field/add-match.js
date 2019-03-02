@@ -1,5 +1,5 @@
-import {saveMatch} from "../dal/match"
-import {insertTeam, teamExsits} from "../dal/team"
+import {saveMatch} from "../../dal/field/match"
+import {insertTeam, teamExsits} from "../../dal/field/team"
 
 async function addMatch(teamNumber, match) {
   if(! (await teamExsits(teamNumber))) {
@@ -12,5 +12,3 @@ async function addMatch(teamNumber, match) {
 export {
   addMatch
 }
-
-//TODO add a match.js route that calls the function on the path /match/submit
