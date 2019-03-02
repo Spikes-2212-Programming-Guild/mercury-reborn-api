@@ -1,8 +1,8 @@
 let teams = null
 
 
-async function getTeam(number) {
-  return await teams.findOne({number}, {_id:0})
+async function getTeam(team_id) {
+  return await teams.findOne({team_id}, {_id:0})
 }
 
 async function insertTeam(team) {

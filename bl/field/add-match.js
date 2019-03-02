@@ -1,12 +1,12 @@
 import {saveMatch} from "../../dal/field/match"
 import {insertTeam, teamExsits} from "../../dal/field/team"
 
-async function addMatch(teamNumber, match) {
+async function addMatch(team_id, match) {
   delete match.team
-  if(! (await teamExsits(teamNumber))) {
-    await insertTeam({number: teamNumber, matches: {}})
+  if(! (await teamExsits(team_id))) {
+    await insertTeam({number: team_id, matches: {}})
   }
-  return await saveMatch(teamNumber, match)
+  return await saveMatch(team_id, match)
 
 }
 

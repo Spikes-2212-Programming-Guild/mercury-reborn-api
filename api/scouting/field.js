@@ -5,7 +5,7 @@ const router = Router()
 
 router.post("/match/submit", (req, res) => {
   const {match} = req.body
-  addMatch(match.team, match)
+  addMatch(match.team_id, match)
     .then(() => res.end())
 })
 
