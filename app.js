@@ -13,6 +13,7 @@ app.use("/login", api.login)
 app.use("/config", api.config)
 app.use("/scouting/field", api.scouting.field)
 app.use("/scouting/pit", api.scouting.pit)
+api.use("/scouting/spectator", api.scouting.spectator)
 
 initializeConnection(config.mongo.url, config.mongo.db, config.mongo.collectionNames)
   .then(() => {
