@@ -1,7 +1,7 @@
 let teams = null
 
 
-async function addPitScouting(team, form) {
+async function insertPitScouting(team, form) {
   return await teams.insertOne({team, form})
 }
 
@@ -23,7 +23,7 @@ function setCollection(collection) {
 }
 
 export {
-  addPitScouting,
+  insertPitScouting,
   getPitScouting,
   setCollection,
   dropPitScouting,

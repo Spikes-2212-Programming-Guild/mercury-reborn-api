@@ -1,8 +1,11 @@
-import {addPitScouting} from "../dal/pit/team"
+import { insertPitScouting, dropPitScouting, pitScoutingExists } from "../dal/pit/team"
 
-export async function savePitScouting(scoutingForm) {
+export async function savePitScouting(form) {
+  const {team} = form
+  delete form.team
 
-  const {team} = scoutingForm
-  delete scoutingForm.team
-  return await addPitScouting(team)
+  if (await pitScoutingExists(team)) {
+    await dropPitScouting(team)
+  }
+  return await insertPitScouting(team, form)
 }
