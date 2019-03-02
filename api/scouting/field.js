@@ -4,8 +4,8 @@ import {addMatch} from "../../bl/field/add-match"
 const router = Router()
 
 router.post("/match/submit", (req, res) => {
-  const {teamNumber, match} = req.body
-  addMatch(teamNumber, match)
+  const {match} = req.body
+  addMatch(match.team, match)
     .then(() => res.end())
 })
 
