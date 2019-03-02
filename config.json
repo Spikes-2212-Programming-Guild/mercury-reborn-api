@@ -4,8 +4,9 @@
   },
 
   "data": {
-    "eventName": "2018isde1",
-    "form": "form.json",
+    "eventName": "2019scmb",
+    "forms": "forms",
+    "pitForm": "pit.json",
     "tbaKey": "kXK9CBWzGkE4u3bTHjymrISlG2lxXm3CdIheTz2XXBlhO38tOwuVEwEVmzXZKFfK"
   },
 
@@ -13,6 +14,10 @@
   "mongo" :{
     "url": "mongodb://localhost:27017",
     "db" : "mercury_reborn",
-    "collection": "demo"
+    "collectionNames": {
+      "pit": "demo_pit",
+      "field": "demo_field",
+      "spectator": "demo_viewer"
+    }
   }
 }
