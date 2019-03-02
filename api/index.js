@@ -1,6 +1,6 @@
 import { login } from "./login"
 import { config } from "./config"
-import { match } from "./match"
+import * as scouting from "./scouting"
 export default {
-  login, config, match
+  login, config, scouting
 }
