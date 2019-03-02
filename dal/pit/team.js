@@ -6,7 +6,7 @@ async function addPitScouting(team, form) {
 }
 
 async function getPitScouting(team) {
-  return (await teams.find({team})).form
+  return (await teams.find({team}).project({id:0, team:0})).form
 }
 
 
