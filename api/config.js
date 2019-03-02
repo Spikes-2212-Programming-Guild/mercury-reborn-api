@@ -17,7 +17,7 @@ router.get("/pit-form", (req, res) => {
   res.json(forms.pit)
 })
 
-router.get("/viewer-form", (req, res) => {
+router.get("/spectator-form", (req, res) => {
   res.json(forms.viewer)
 })
 
