@@ -14,6 +14,9 @@ app.use("/config", api.config)
 app.use("/scouting/field", api.scouting.field)
 app.use("/scouting/pit", api.scouting.pit)
 app.use("/scouting/spectator", api.scouting.spectator)
+app.use("/tactics/field", api.tactics.field)
+app.use("/tactics/pit", api.tactics.pit)
+app.use("/tactics/spectator", api.tactics.spectator)
 
 initializeConnection(config.mongo.url, config.mongo.db, config.mongo.collectionNames)
   .then(() => {
