@@ -1,7 +1,7 @@
-import {saveMatch} from "../../dal/field/match"
-import {insertTeam, teamExsits} from "../../dal/field/team"
+import {saveMatch} from "../dal/field/match"
+import {insertTeam, teamExsits} from "../dal/field/team"
 
-async function addMatch(team_id, match) {
+async function field(team_id, match) {
   delete match.team
   if(! (await teamExsits(team_id))) {
     await insertTeam({number: team_id, matches: {}})
@@ -11,5 +11,5 @@ async function addMatch(team_id, match) {
 }
 
 export {
-  addMatch
+  field
 }
