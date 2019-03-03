@@ -22,7 +22,7 @@ async function matchExists(team_id, matchName) {
   return !!m
 }
 
-async function getAllFromTeam(team_id) {
+async function getMatchesForTeam(team_id) {
   return await team.getTeam(team_id).matches
 }
 
@@ -31,5 +31,5 @@ export {
   getMatch,
   removeMatch,
   matchExists,
-  getAllFromTeam
+  getMatchesForTeam
 }
