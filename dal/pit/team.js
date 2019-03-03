@@ -17,7 +17,7 @@ async function findPitScouting(team) {
   return (await teams.findOne({team}).project({id:0, team:0})).form
 }
 
-async function getAllSavedTeams() {
+async function getAllSavedTeamIds() {
   const teams = await teams.find()
   return teams.map(team => team.team)
 }
@@ -33,5 +33,5 @@ export {
   setCollection,
   deletePitScouting,
   pitScoutingExists,
-  getAllSavedTeams
+  getAllSavedTeamIds
 }

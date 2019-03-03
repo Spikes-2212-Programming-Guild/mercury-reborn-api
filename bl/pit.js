@@ -1,11 +1,15 @@
-import { insertPitScouting, deletePitScouting, pitScoutingExists } from "../dal/pit/team"
+import * as dal from "../dal/pit/team"
 
 export async function savePitScouting(form) {
   const {team} = form
   delete form.team
 
-  if (await pitScoutingExists(team)) {
-    await deletePitScouting(team)
+  if (await dal.pitScoutingExists(team)) {
+    await dal.deletePitScouting(team)
   }
-  return await insertPitScouting(team, form)
+  return await dal.insertPitScouting(team, form)
+}
+
+export async function getAllSavedTeamIds() {
+  return await dal.getAllSavedTeamIds()
 }
