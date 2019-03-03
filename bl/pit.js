@@ -13,3 +13,10 @@ export async function savePitScouting(form) {
 export async function getAllSavedTeamIds() {
   return await dal.getAllSavedTeamIds()
 }
+
+export async function getTeam (team_id) {
+  if (! await dal.pitScoutingExists(team_id)) {
+    throw Error(`unable to find pit scouting for team ${team_id}`)
+  }
+  return await dal.findPitScouting(team_id)
+}
