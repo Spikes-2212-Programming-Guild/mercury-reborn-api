@@ -9,6 +9,7 @@ router.get("/match-names", (req, res) => {
 
 router.get("/match/:team_id/:match_name", (req, res) => {
   const {team_id, match_name} = req.params
+  console.log(req.params)
 
   getFieldScouting(team_id, match_name)
     .then(match => res.json(match))

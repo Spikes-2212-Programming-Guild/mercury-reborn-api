@@ -25,7 +25,7 @@ async function getAllSavedMatchNames () {
   return _.uniqWith(savedMatches, _.isEqual)
 }
 
-async function getMatch(team_id, match_name) {
+async function getFieldScouting(team_id, match_name) {
   if (! await matchExists(team_id, match_name)) {
     throw Error(`Match ${match_name} was not found for team ${team_id}`)
   }
@@ -36,5 +36,5 @@ async function getMatch(team_id, match_name) {
 export {
   addMatch,
   getAllSavedMatchNames,
-  getMatch
+  getFieldScouting
 }
