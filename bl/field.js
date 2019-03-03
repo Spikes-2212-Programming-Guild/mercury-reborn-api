@@ -1,4 +1,4 @@
-import { saveMatch, getMatchesForTeam } from "../dal/field/match"
+import { saveMatch, getMatchesForTeam, matchExists, getMatch as getMatchFromDB} from "../dal/field/match"
 import { insertTeam, teamExsits, getAll } from "../dal/field/team"
 import * as _ from "lodash"
 
@@ -25,7 +25,16 @@ async function getAllSavedMatchNames () {
   return _.uniqWith(savedMatches, _.isEqual)
 }
 
+async function getMatch(team_id, match_name) {
+  if (! await matchExists(team_id, match_name)) {
+    throw Error(`Match ${match_name} was not found for team ${team_id}`)
+  }
+
+  return await getMatchFromDB(team_id, match_name)
+}
+
 export {
   addMatch,
-  getAllSavedMatchNames
+  getAllSavedMatchNames,
+  getMatch
 }

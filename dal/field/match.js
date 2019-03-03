@@ -18,7 +18,7 @@ async function removeMatch (team_id, matchName) {
 }
 
 async function matchExists (team_id, matchName) {
-  const m = team.getTeam(team_id).matches.find(match => match.number === matchName)
+  const m = team.getTeam(team_id).matches.find(match => match.name === matchName)
   return !!m
 }
 
