@@ -1,7 +1,7 @@
 let teams = null
 
 async function getTeam (team_id) {
-  return await teams.findOne({team_id}, {_id: 0})
+  return await teams.findOne({team_id})
 }
 
 async function insertTeam (team) {
@@ -22,7 +22,7 @@ async function teamExsits (team_id) {
 }
 
 async function getAll () {
-  return await teams.find().project({_id: 0}).toArray
+  return await teams.find().toArray()
 }
 
 function setCollection (collection) {
