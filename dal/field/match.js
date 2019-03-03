@@ -26,22 +26,10 @@ async function getMatchesForTeam (team_id) {
   return await team.getTeam(team_id).matches
 }
 
-async function getAllSavedMatchNames () {
-  const team_ids = (await team.getAll()).map(team => team.team_id)
-  const matches = []
-  for (let team_id in team_ids) {
-    for (let matchName in await getMatchesForTeam(team_id)) {
-      matches.push(matchName)
-    }
-  }
-  return _.uniqWith(matches, _.isEqual)
-}
-
 export {
   saveMatch,
   getMatch,
   removeMatch,
   matchExists,
-  getMatchesForTeam,
-  getAllSavedMatchNames
+  getMatchesForTeam
 }
