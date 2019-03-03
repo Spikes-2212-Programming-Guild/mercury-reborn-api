@@ -1,5 +1,5 @@
 import {Router} from "express"
-import {addMatch} from "../../bl/field/add-match"
+import {addMatch} from "../../bl/addMatch"
 
 const router = Router()
 
