@@ -17,14 +17,21 @@ async function spectatorMatchExists(name) {
   return !!(await findSpectatorMatch(name))
 }
 
+async function getAllSavedMatchNames() {
+  const matches = await matches.find({})
+  return matches.map(match => match.name)
+}
+
 function setCollection(collection) {
   matches = collection
 }
+
 
 export {
   setCollection,
   insertSpectatorMatch,
   findSpectatorMatch,
   deleteSpectatorMatch,
-  spectatorMatchExists
+  spectatorMatchExists,
+  getAllSavedMatchNames
 }
