@@ -9,16 +9,16 @@ async function insertTeam(team) {
   return await teams.insertOne(team)
 }
 
-async function updateTeam(number, updateQuery) {
-  return await teams.updateOne({number}, updateQuery)
+async function updateTeam(team_id, updateQuery) {
+  return await teams.updateOne({team_id}, updateQuery)
 }
 
-async function removeTeam(number) {
-  return await teams.removeOne({number})
+async function removeTeam(team_id) {
+  return await teams.removeOne({team_id})
 }
 
-async function teamExsits(number) {
-  const t = await getTeam(number)
+async function teamExsits(team_id) {
+  const t = await getTeam(team_id)
   return !!t
 }
 

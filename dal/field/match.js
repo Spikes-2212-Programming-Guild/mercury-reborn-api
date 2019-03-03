@@ -1,29 +1,29 @@
 import * as team from "./team"
 
-async function saveMatch(teamNumber, match) {
+async function saveMatch(team_id, match) {
   const query = {}
   console.log(match)
   query[`matches.${match.match}`] = match
-  return await team.updateTeam(teamNumber, {$set: query})
+  return await team.updateTeam(team_id, {$set: query})
 }
 
-async function getMatch(teamNumber, matchName) {
-  return await team.getTeam(teamNumber).matches.find(match => match.number = matchName)
+async function getMatch(team_id, matchName) {
+  return await team.getTeam(team_id).matches.find(match => match.number = matchName)
 }
 
-async function removeMatch(teamNumber, matchName) {
+async function removeMatch(team_id, matchName) {
   const query = {}
   query[`matches.${matchName}`] = ""
-  return await team.updateTeam(teamNumber, {$unset: query})
+  return await team.updateTeam(team_id, {$unset: query})
 }
 
-async function matchExists(teamNumber, matchName) {
-  const m = team.getTeam(teamNumber).matches.find(match => match.number === matchName)
+async function matchExists(team_id, matchName) {
+  const m = team.getTeam(team_id).matches.find(match => match.number === matchName)
   return !!m
 }
 
-async function getAllFromTeam(teamNumber) {
-  return await team.getTeam(teamNumber).matches
+async function getAllFromTeam(team_id) {
+  return await team.getTeam(team_id).matches
 }
 
 export {
