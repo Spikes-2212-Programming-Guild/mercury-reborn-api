@@ -14,7 +14,7 @@ export async function getAllSavedTeamIds() {
   return await dal.getAllSavedTeamIds()
 }
 
-export async function getTeam (team_id) {
+export async function getPitScouting (team_id) {
   if (! await dal.pitScoutingExists(team_id)) {
     throw Error(`unable to find pit scouting for team ${team_id}`)
   }
