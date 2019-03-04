@@ -8,7 +8,8 @@ async function saveMatch (team_id, match) {
 }
 
 async function getMatch (team_id, matchName) {
-  return await team.getTeam(team_id).matches.find(match => match.number = matchName)
+  let matches = await getMatchesForTeam(team_id)
+  return matches[matchName]
 }
 
 async function removeMatch (team_id, matchName) {
@@ -22,7 +23,8 @@ async function matchExists (team_id, matchName) {
 }
 
 async function getMatchesForTeam (team_id) {
-  return (await team.getTeam(team_id)).matches
+  let teamData = await team.getTeam(team_id)
+  return teamData.matches
 }
 
 export {
