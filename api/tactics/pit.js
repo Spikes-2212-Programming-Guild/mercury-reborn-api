@@ -5,7 +5,7 @@ const router = Router()
 
 
 router.get("/team-ids", (req, res) => {
-  getAllSavedTeamIds().then(team_ids => res.end(team_ids))
+  getAllSavedTeamIds().then(team_ids => res.json(team_ids))
 })
 
 router.get("/team/:team_id", (req, res) => {
