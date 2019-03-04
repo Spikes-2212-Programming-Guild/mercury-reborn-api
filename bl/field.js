@@ -21,8 +21,13 @@ async function getAllSavedMatchNames () {
 
     _.map(matches, match => savedMatches.push(match.name))
   }
+  return filterOnlyFullMatches(savedMatches)
+}
 
-  return _.uniqWith(savedMatches, _.isEqual)
+function filterOnlyFullMatches(matches) {
+  return _.chain(matches).countBy(match => match).map((number, match) => {
+    return {number, match}
+  }).filter(match => match.number >= 6).map(val => val.match).value()
 }
 
 async function getFieldScouting(team_id, match_name) {
