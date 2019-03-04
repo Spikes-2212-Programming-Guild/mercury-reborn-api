@@ -18,8 +18,8 @@ async function findPitScouting(team) {
 }
 
 async function getAllSavedTeamIds() {
-  const teams = await teams.find()
-  return teams.map(team => team.team)
+  const allTeams = await teams.find().toArray()
+  return allTeams.map(team => team.team)
 }
 
 
