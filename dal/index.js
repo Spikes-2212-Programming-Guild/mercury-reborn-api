@@ -8,10 +8,10 @@ const initializeConnection = async (url, dbName , collectionNames) => {
   const db = await client.db(dbName)
   const fieldCollection = await db.collection(collectionNames.field)
   const pitCollection = await db.collection(collectionNames.pit)
-  const specatatorCollection = await  db.collection(collectionNames.spectator)
+  const spectatorCollection = await db.collection(collectionNames.spectator)
   field.setCollection(fieldCollection)
   pit.setCollection(pitCollection)
-  spectator.setCollection(specatatorCollection)
+  spectator.setCollection(spectatorCollection)
 
 }
 

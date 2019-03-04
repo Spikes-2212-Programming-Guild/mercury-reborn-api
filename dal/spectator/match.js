@@ -18,8 +18,8 @@ async function spectatorMatchExists(name) {
 }
 
 async function getAllSavedMatchNames() {
-  const matches = await matches.find({})
-  return matches.map(match => match.name)
+  const matchesData = await matches.find({})
+  return matchesData.map(match => match.name)
 }
 
 function setCollection(collection) {
