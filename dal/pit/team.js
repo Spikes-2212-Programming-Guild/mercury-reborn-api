@@ -6,7 +6,7 @@ async function insertPitScouting(team, form) {
 }
 
 async function pitScoutingExists(team) {
-  return !!(await teams.findOne({team}))
+  return !!(await findPitScouting(team))
 }
 
 async function deletePitScouting(team) {
@@ -14,7 +14,7 @@ async function deletePitScouting(team) {
 }
 
 async function findPitScouting(team) {
-  return (await teams.findOne({team}).project({id:0, team:0})).form
+  return (await teams.findOne({team})).form
 }
 
 async function getAllSavedTeamIds() {
