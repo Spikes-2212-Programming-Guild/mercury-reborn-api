@@ -5,7 +5,7 @@ const router = Router()
 
 router.get("/match-names", (req, res) => {
   getAllSavedMatchNames().then(match_names => {
-    res.end(match_names)
+    res.json(match_names)
   })
 })
 
