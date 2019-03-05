@@ -6,7 +6,7 @@ async function insertSpectatorMatch(name, match) {
 }
 
 async function findSpectatorMatch(name) {
-  return (await matches.findOne({name}.project({name:0, _id:0}))).match
+  return (await matches.findOne({name}))
 }
 
 async function deleteSpectatorMatch(name) {
@@ -14,12 +14,13 @@ async function deleteSpectatorMatch(name) {
 }
 
 async function spectatorMatchExists(name) {
-  return !!(await findSpectatorMatch(name))
+  return !!(await matches.findOne({name}))
 }
 
 async function getAllSavedMatchNames() {
-  const matchesData = await matches.find({})
-  return matchesData.map(match => match.name)
+  const matchesData = await matches.find({}).toArray()
+  let result = matchesData.map(match => match.name)
+  return result
 }
 
 function setCollection(collection) {

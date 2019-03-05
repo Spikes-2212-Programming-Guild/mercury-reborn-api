@@ -18,7 +18,7 @@ router.get("/pit-form", (req, res) => {
 })
 
 router.get("/spectator-form", (req, res) => {
-  res.json(forms.viewer)
+  res.json(forms.spectator)
 })
 
 router.get("/tba-key", (req, res) => {

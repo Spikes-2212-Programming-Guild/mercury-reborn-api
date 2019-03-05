@@ -14,7 +14,6 @@ async function addMatch (team_id, match) {
 async function getAllSavedMatchNames () {
   const team_ids = (await getAll()).map(team => team.team_id)
   const savedMatches = []
-  console.log(team_ids)
   for (let i = 0; i < team_ids.length; i++) {
     let team_id = team_ids[i]
     let matches = await getMatchesForTeam(team_id)
