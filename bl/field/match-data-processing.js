@@ -88,6 +88,13 @@ async function summarizeMatches (matches) {
 
   const gatheredResults = gatherMatchResults(matches)
   const labeledGatheredResults = labelGatheredQuestionsByType(gatheredResults, formConfig)
+
+  const matchNames = []
+
+  for (let match_name in matches) {
+    matchNames.push(match_name)
+  }
+
   for (const section in labeledGatheredResults) {
     for (const question_name in labeledGatheredResults[section]) {
       const question = labeledGatheredResults[section][question_name]
@@ -99,6 +106,7 @@ async function summarizeMatches (matches) {
       }
     }
   }
+  labeledGatheredResults.matches = matchNames
   return labeledGatheredResults
 }
 
