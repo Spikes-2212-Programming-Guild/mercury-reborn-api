@@ -1,7 +1,7 @@
-import { saveMatch, getMatchesForTeam, matchExists, getMatch as getMatchFromDB} from "../dal/field/match"
-import { insertTeam, teamExsits, getAll } from "../dal/field/team"
+import { saveMatch, getMatchesForTeam, matchExists, getMatch as getMatchFromDB} from "../../dal/field/match"
+import { insertTeam, teamExsits, getAll } from "../../dal/field/team"
 import * as _ from "lodash"
-import { summarizeMatches } from "./field-data-processing"
+import { summarizeMatches } from "./match-data-processing"
 
 async function addMatch (team_id, match) {
   delete match.team

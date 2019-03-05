@@ -1,5 +1,5 @@
 import * as _ from "lodash"
-import gameConfig from "../config"
+import gameConfig from "../../config"
 
 function findQuestion (questions, question_name) {
   return _.filter(questions, question => question.name === question_name)[0]
