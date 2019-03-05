@@ -1,0 +1,10 @@
+{
+  "endgame": [
+    {"name": "Red 1 Comments", "type": "text"},
+    {"name": "Red 2 Comments", "type": "text"},
+    {"name": "Red 3 Comments", "type": "text"},
+    {"name": "Blue 1 Comments", "type": "text"},
+    {"name": "Blue 2 Comments", "type": "text"},
+    {"name": "Blue 3 Comments", "type": "text"}
+  ]
+}
