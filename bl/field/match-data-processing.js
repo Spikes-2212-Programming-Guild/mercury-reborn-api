@@ -15,7 +15,7 @@ function gatherMatchResults (matches) {
     delete matchData.team_id
     delete matchData.name
     for (const section in matchData) {
-      if (! results[section]) results[section] = {}
+      if (!results[section]) results[section] = {}
       const data = matchData[section] // unpacks all the data under {auto:{ ... }}
       for (const key in data) {
         const value = data[key]
@@ -58,12 +58,14 @@ function median (numbers) {
 }
 
 function processNumberQuestion (question) {
-  const processed = Object.assign({}, question)
+  const processed = {
+    results: {all: question.results}
+  }
   const {results} = question
 
-  processed.averrage = _.mean(results)
-  processed.median = median(results)
-  processed.max = _.max(results)
+  processed.results.averrage = _.mean(results)
+  processed.results.median = median(results)
+  processed.results.max = _.max(results)
 
   return processed
 
@@ -79,7 +81,7 @@ function processEnumQuestion (question) {
   for (const value in results) {
     processed.results[value] = results[value]
   }
-
+  processed.results.total = Object.keys(results).length
   return processed
 }
 
