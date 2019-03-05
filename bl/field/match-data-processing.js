@@ -5,7 +5,7 @@ function findQuestion (questions, question_name) {
   return _.filter(questions, question => question.name === question_name)[0]
 }
 
-const forms = require(`../${gameConfig.data.forms}`)
+const forms = require(`../../${gameConfig.data.forms}`)
 
 function gatherMatchResults (matches) {
   const results = {}
@@ -15,13 +15,12 @@ function gatherMatchResults (matches) {
     delete matchData.team_id
     delete matchData.name
     for (const section in matchData) {
-      results[section] = {}
-      const resultsForSection = results[section]
+      if (! results[section]) results[section] = {}
       const data = matchData[section] // unpacks all the data under {auto:{ ... }}
       for (const key in data) {
         const value = data[key]
-        if (!resultsForSection[key]) resultsForSection[key] = {results: []}
-        resultsForSection[key].results.push(value)
+        if (!results[section][key]) results[section][key] = {results: []}
+        results[section][key].results.push(value)
       }
     }
   }
