@@ -1,5 +1,5 @@
 import {Router} from "express"
-import { getAllSavedMatchNames, getFieldScouting } from "../../bl/field"
+import { getAllSavedMatchNames, getFieldScouting, summarizeMatchesForTeam} from "../../bl/field"
 
 const router = Router()
 
@@ -13,6 +13,13 @@ router.get("/match/:team_id/:match_name", (req, res) => {
   getFieldScouting(team_id, match_name)
     .then(match => res.json(match))
 
+})
+
+router.get("/matches/:team_id", (req, res) => {
+  const {team_id} = req.params
+
+  summarizeMatchesForTeam(team_id)
+    .then(summ => res.json(summ))
 })
 
 

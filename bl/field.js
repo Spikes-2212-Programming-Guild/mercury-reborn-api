@@ -1,6 +1,7 @@
 import { saveMatch, getMatchesForTeam, matchExists, getMatch as getMatchFromDB} from "../dal/field/match"
 import { insertTeam, teamExsits, getAll } from "../dal/field/team"
 import * as _ from "lodash"
+import { summarizeMatches } from "./field-data-processing"
 
 async function addMatch (team_id, match) {
   delete match.team
@@ -37,8 +38,15 @@ async function getFieldScouting(team_id, match_name) {
   return await getMatchFromDB(team_id, match_name)
 }
 
+async function summarizeMatchesForTeam(team_id) {
+  const matches = await getMatchesForTeam(team_id)
+
+  return summarizeMatches(matches)
+}
+
 export {
   addMatch,
   getAllSavedMatchNames,
-  getFieldScouting
+  getFieldScouting,
+  summarizeMatchesForTeam
 }
