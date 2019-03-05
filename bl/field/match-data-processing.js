@@ -70,14 +70,14 @@ function processNumberQuestion (question) {
 }
 
 function processEnumQuestion (question) {
-  const processed = {type: question.type}
+  const processed = {type: question.type, results: {}}
 
   let {results} = question
 
   results = _.countBy(results, r => r)
 
   for (const value in results) {
-    processed[value] = results[value]
+    processed.results[value] = results[value]
   }
 
   return processed
