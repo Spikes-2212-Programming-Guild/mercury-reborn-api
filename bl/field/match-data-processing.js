@@ -70,7 +70,7 @@ function processNumberQuestion (question) {
 }
 
 function processEnumQuestion (question) {
-  const processed = Object.assign({}, question)
+  const processed = {type: question.type}
 
   let {results} = question
 
