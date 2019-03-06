@@ -1,27 +1,151 @@
 {
-  "sandstorm" : [
-    {"name":  "Started With", "type":  "enum", "options": ["Hatch", "Cargo", "None"]},
-    {"name": "Started At", "type": "enum", "options": ["Level 1", "Level 2"]}
+  "start": [
+    {
+      "name": "Started With",
+      "type": "enum",
+      "options": [
+        "Hatch",
+        "Cargo",
+        "None"
+      ]
+    },
+    {
+      "name": "Started At",
+      "type": "enum",
+      "options": [
+        "Level 1",
+        "Level 2"
+      ]
+    }
+  ],
+  "sandstorm": [
+    {
+      "name": "Crossed Hub Line?",
+      "type": "boolean"
+    },
+    {
+      "name": "Cargo Collected",
+      "type": "number"
+    },
+    {
+      "name": "Cargo Dropped",
+      "type": "number"
+    },
+    {
+      "name": "Puts Cargo To Low",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Cargo To Center",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Cargo To High",
+      "type": "boolean"
+    },
+    {
+      "name": "Hatch Collected",
+      "type": "number"
+    },
+    {
+      "name": "Hatch Dropped",
+      "type": "number"
+    },
+    {
+      "name": "Puts Hatch To Low",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Hatch To Center",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Hatch To High",
+      "type": "boolean"
+    }
   ],
   "teleop": [
-    {"name": "Cargo Collected", "type": "number"},
-    {"name": "Cargo Dropped", "type": "number" },
-
-    {"name": "Puts Cargo To Low", "type": "boolean"},
-    {"name": "Puts Cargo To Center", "type": "boolean"},
-    {"name": "Puts Cargo To High", "type": "boolean"},
-
-
-    {"name": "Hatch Collected", "type": "number"},
-    {"name": "Hatch Dropped", "type": "number"},
-
-    {"name": "Puts Hatch To Low", "type": "boolean"},
-    {"name": "Puts Hatch To Center", "type": "boolean"},
-    {"name": "Puts Hatch To High", "type": "boolean"},
-
-    {"name": "Played Defensively?", "type": "boolean"},
-
-    {"name": "Robot Broke?", "type": "boolean"},
-    {"name": "Comments", "type":  "text"}
+    {
+      "name": "Cargo Collected",
+      "type": "number"
+    },
+    {
+      "name": "Cargo Dropped",
+      "type": "number"
+    },
+    {
+      "name": "Puts Cargo To Low",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Cargo To Center",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Cargo To High",
+      "type": "boolean"
+    },
+    {
+      "name": "Hatch Collected",
+      "type": "number"
+    },
+    {
+      "name": "Hatch Dropped",
+      "type": "number"
+    },
+    {
+      "name": "Puts Hatch To Low",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Hatch To Center",
+      "type": "boolean"
+    },
+    {
+      "name": "Puts Hatch To High",
+      "type": "boolean"
+    },
+    {
+      "name": "Played Defensively?",
+      "type": "boolean"
+    },
+    {
+      "name": "Robot Broke?",
+      "type": "boolean"
+    },
+    {
+      "name": "Comments",
+      "type": "text"
+    }
+  ],
+  "endgame": [
+    {
+      "name": "Climbed?",
+      "type": "enum",
+      "options": [
+        "No",
+        "Level 1",
+        "Level 2",
+        "Level 3"
+      ]
+    }
+  ],
+  "general": [
+    {
+      "name": "Robot Broke?",
+      "type": "boolean"
+    },
+    {
+      "name": "What did brake?",
+      "type": "text"
+    },
+    {
+      "name": "Red or Yellow Card?",
+      "type": "boolean"
+    },
+    {
+      "name": "Comments",
+      "type": "text"
+    }
   ]
 }

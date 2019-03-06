@@ -1,5 +1,9 @@
 {
   "general": [
-    {}
+    {"name": "Drivetrain Type", "type": "text"},
+    {"name": "Cargo Intake", "type": "text"},
+    {"name": "Hatch Intake", "type": "text"},
+    {"name": "Climbing System", "type": "text"},
+    {"name": "Fragility", "type": "text"}
   ]
 }
