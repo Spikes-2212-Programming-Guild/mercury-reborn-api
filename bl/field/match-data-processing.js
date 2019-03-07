@@ -82,7 +82,7 @@ function processEnumQuestion (question) {
   for (const value in results) {
     processed.results[value] = results[value]
   }
-  processed.results.total = Object.keys(results).length
+  processed.results.total = Object.values(results).reduce((sum, n) => sum+n)
   return processed
 }
 
