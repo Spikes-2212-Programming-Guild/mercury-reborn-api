@@ -3,6 +3,8 @@
     {"name": "Drivetrain Type", "type": "text"},
     {"name": "Cargo Intake", "type": "text"},
     {"name": "Hatch Intake", "type": "text"},
+    {"name": "Elevating System", "type": "text"},
+    {"name": "Multi Directional System", "type":"text"},
     {"name": "Climbing System", "type": "text"},
     {"name": "Fragility", "type": "text"}
   ]
