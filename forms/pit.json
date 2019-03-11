@@ -11,7 +11,7 @@
   "Control System": [
     {"name": "Number Of Cameras", "type": "number"},
     {"name": "Has Driver Cameras", "type": "boolean"},
-    {"name": "Has Image Processing Cameras", "types": "boolean"},
+    {"name": "Has Image Processing Cameras", "type": "boolean"},
     {"name": "Sandstorm Handling", "type": "text"}
   ],
 
