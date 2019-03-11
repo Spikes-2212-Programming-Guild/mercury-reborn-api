@@ -59,7 +59,7 @@ function median (numbers) {
 
 function normal (numbers) {
   if (_.uniq(numbers).length >= 3) {
-    const min = _.min(numbers), max=_.max(numbers)
+    const min = _.min(numbers), max = _.max(numbers)
 
     numbers = _.chain(numbers)
       .filter(n => n !== 0)
@@ -71,8 +71,8 @@ function normal (numbers) {
 
 function processNumberQuestion (question) {
   const processed = {
-	  results: {all: question.results},
-	  type:"number"
+    results: {all: question.results},
+    type: "number"
   }
   const {results} = question
 
@@ -95,7 +95,7 @@ function processEnumQuestion (question) {
   for (const value in results) {
     processed.results[value] = results[value]
   }
-  processed.results.total = Object.values(results).reduce((sum, n) => sum+n)
+  processed.results.total = Object.values(results).reduce((sum, n) => sum + n)
   return processed
 }
 
