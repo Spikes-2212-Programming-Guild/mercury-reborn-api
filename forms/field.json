@@ -14,6 +14,11 @@
   "Teleop": [
     {"name": "Cargo Scored?", "type": "number"},
     {"name": "Cargo Dropped?", "type": "number"},
+
+    {"name": "Places Cargo Low", "type": "boolean"},
+    {"name": "Places Cargo Middle", "type": "boolean"},
+    {"name": "Places Cargo High", "type": "boolean"},
+
     {"name": "Hatch Scored?", "type": "number"},
     {"name": "Hatch Dropped?", "type": "number"},
 
@@ -21,9 +26,6 @@
     {"name": "Places Hatch Middle", "type": "boolean"},
     {"name": "Places Hatch High", "type": "boolean"},
 
-    {"name": "Places Cargo Low", "type": "boolean"},
-    {"name": "Places Cargo Middle", "type": "boolean"},
-    {"name": "Places Cargo High", "type": "boolean"},
 
     {"name": "Played Defensively", "type": "boolean"},
     {"name": "Defense Comments", "type": "text"},
