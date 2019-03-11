@@ -47,7 +47,7 @@ async function summarizeMatchesForTeam (team_id) {
 }
 
 async function getAllTeamIds () {
-  return (await getAll()).map(team => team.team_id)
+  return (await getAll()).map(team => team.team_id).filter(a => a)
 }
 
 export {
