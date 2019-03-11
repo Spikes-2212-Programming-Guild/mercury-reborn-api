@@ -71,7 +71,8 @@ function normal (numbers) {
 
 function processNumberQuestion (question) {
   const processed = {
-    results: {all: question.results}
+	  results: {all: question.results},
+	  type:"number"
   }
   const {results} = question
 
