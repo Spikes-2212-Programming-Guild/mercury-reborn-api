@@ -57,6 +57,18 @@ function median (numbers) {
   return median
 }
 
+function normal (numbers) {
+  if (_.uniq(numbers).length >= 3) {
+    const min = _.min(numbers), max=_.max(numbers)
+
+    numbers = _.chain(numbers)
+      .filter(n => n !== 0)
+      .filter(n => n !== min)
+      .filter(n => n !== max).value()
+  }
+  return _.mean(numbers)
+}
+
 function processNumberQuestion (question) {
   const processed = {
     results: {all: question.results}
@@ -66,6 +78,7 @@ function processNumberQuestion (question) {
   processed.results.averrage = _.mean(results)
   processed.results.median = median(results)
   processed.results.max = _.max(results)
+  processed.results.normal = normal(results)
 
   return processed
 
