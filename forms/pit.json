@@ -9,14 +9,18 @@
   ],
   "Control System": [
     {"name": "Number Of Cameras", "type": "number"},
+    {"name": "Has Driver Cameras", "type": "boolean"},
+    {"name": "Has Image Processing Cameras", "types": "booelan"},
     {"name": "Sandstorm Handling", "type": "text"}
   ],
 
   "Drivetrain": [
     {"name": "Number Of Motors", "type": "number", "min": 4},
     {"name": "Drivetrain Type", "type": "enum", "options": ["8", "6", "Tank", "Holonomic"]},
+    {"name": "Drop Drivetrain", "type": "boolean"},
     {"name": "Drivetrain Wheels", "type": "text"},
-    {"name": "Is Closed?", "type": "boolean"}
+    {"name": "Is Closed?", "type": "boolean"},
+    {"name": "Comments", "type": "text"}
   ],
   "End": [
     {"name": "Additional Comments", "type": "text"}
